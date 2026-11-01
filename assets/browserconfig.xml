@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square64x64logo src="https://glitifyorg.github.io/assets/mstile.png"/>
+            <TileColor>#9966ff</TileColor>
+        </tile>
+        <notification>
+            <polling-uri src="/notifications.xml"/>
+            <frequency>60</frequency>
+            <cycle>1</cycle>
+        </notification>
+    </msapplication>
+</browserconfig>
