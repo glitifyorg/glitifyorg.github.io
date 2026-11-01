@@ -1,0 +1,47 @@
+{
+  "name": "Glitify — больше блоков, расширений, звуков, костюмов, спрайтов, функций и другого!",
+  "short_name": "Glitify",
+  "description": "Glitify — больше блоков, расширений, звуков, костюмов, спрайтов, функций и другого от LetMeow.",
+  "start_url": "https://glitifyorg.github.io/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#9966ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ru",
+  "dir": "ltr",
+  "categories": ["social", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "https://glitifyorg.github.io/assets/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://glitifyorg.github.io/assets/favicon16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://glitifyorg.github.io/assets/favicon32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://glitifyorg.github.io/assets/apple-touch-icon.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Главная",
+      "url": "https://glitifyorg.github.io/",
+      "icons": [{ "src": "https://glitifyorg.github.io/assets/favicon16.png", "sizes": "16x16" }]
+    }
+  ]
+}
