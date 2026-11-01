@@ -1,0 +1,4 @@
+Contact: mailto:letmeowllc@gmail.com
+Contact: https://t.me/whyemeraldcat
+Preferred-Languages: ru, en
+Canonical: https://glitifyorg.github.io/.well-known/security.txt
