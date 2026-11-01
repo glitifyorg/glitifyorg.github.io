@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://glitifyorg.github.io/sitemap.xml
