@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
       console.warn(`Сохранённая тема не найдена. Необходимо проверить значение: ${lstheme}`);
       let lspdark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       let lsplight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      if (lcpdark) {
+      if (lspdark) {
         themer('dark');
-      } else if (lcplight) {
+      } else if (lsplight) {
         themer('light');
       } else {
         console.warn(`Тема пользователя не light и не dark!`)
