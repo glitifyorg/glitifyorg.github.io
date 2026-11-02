@@ -1,89 +1,57 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const root = document.getElementById('root');
+  const root = document.getElementById('root');  
   function themer(t) {
     console.log(`Тема изменена на ${t}`);
-    const theme = t;
     root.theme = t;
-    localStorage.setItem('gf:theme', t)
+    localStorage.setItem('gf:theme', t);
   }
   function accenter(a) {
     console.log(`Акцент изменён на ${a}`);
-    const accent = a;
     root.accent = a;
-    localStorage.setItem('gf:accent', a)
-   }
+    localStorage.setItem('gf:accent', a);
+  }
   let lstheme = localStorage.getItem('gf:theme');
-  if (lstheme !== null) {
-    if (lstheme === 'light') {
-      themer('light');
-    } else if (lstheme === 'dark') {
-      themer('dark');
-    } else {
-      console.warn(`Сохранённая тема не найдена. Необходимо проверить значение: ${lstheme}`);
-      let lspdark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      let lsplight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      if (lspdark) {
-        themer('dark');
-      } else if (lsplight) {
-        themer('light');
-      } else {
-        console.warn(`Тема пользователя не light и не dark!`)
-      }
-    }
+  if (lstheme === 'light' || lstheme === 'dark') {
+    themer(lstheme);
   } else {
-    let lspdark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    let lsplight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    if (lspdark) {
+    if (lstheme !== null) {
+      console.warn(`Сохранённая тема не найдена. Необходимо проверить значение: ${lstheme}`);
+    }
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    if (prefersDark) {
       themer('dark');
-    } else if (lsplight) {
+    } else if (prefersLight) {
       themer('light');
     } else {
-      console.warn(`Тема пользователя не light и не dark!`)
+      console.warn(`Тема пользователя не light и не dark!`);
     }
   }
   let lsaccent = localStorage.getItem('gf:accent');
-  if (lsaccent !== null) {
-    if (lsaccent === 'emerald') {
-      accenter('emerald');
-    } else if (lsaccent === 'red') {
-      accenter('red');
-    } else if (lsaccent === 'yellow') {
-      accenter('yellow');
-    } else if (lsaccent === 'green') {
-      accenter('green');
-    } else if (lsaccent === 'blue') {
-      accenter('blue');
-    } else if (lsaccent === 'purple') {
-      accenter('purple');
-    } else if (lsaccent === 'orange') {
-      accenter('orange');
-    } else {
+  const validAccents = ['emerald', 'red', 'yellow', 'green', 'blue', 'purple', 'orange'];
+  if (validAccents.includes(lsaccent)) {
+    accenter(lsaccent);
+  } else {
+    if (lsaccent !== null) {
       console.warn(`Сохранённый акцент не найден. Необходимо проверить значение: ${lsaccent}`);
     }
-  } else {
     accenter('emerald');
   }
+  let isFramed = false;
+  let frameHost = null;
   try {
-    let framew = window.self !== window.top;
-    if (framew) {
-      const framee = document.querySelector('iframe');
-      if (framee) {
-        let framed = new URL(framee.src).hostname;
-      }
+    isFramed = window.self !== window.top;
+    if (isFramed && document.referrer) {
+      frameHost = new URL(document.referrer).hostname;
     }
   } catch (e) {
-    let framew = true;
-    let framed = false;
+    isFramed = true;
+    frameHost = null;
   }
-  if (framew) {
-    if (framed !== false) {
-      if (framed !== 'glitifyorg.github.io') {
-        if (framed !== 'letmeowllc.github.io') {
-          throw new Error('С этого сайта нельзя создавать фрейм glitify');
-        }
-      }
-    } else {
-      throw new Error('Домен, который создал фрейм glitify не опознан.');
+  if (isFramed) {
+    const allowedHosts = ['glitifyorg.github.io', 'letmeowllc.github.io'];
+    if (!frameHost || !allowedHosts.includes(frameHost)) {
+      throw new Error('С этого сайта нельзя создавать фрейм glitify');
     }
   }
 });
