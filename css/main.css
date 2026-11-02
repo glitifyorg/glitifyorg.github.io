@@ -1,10 +1,25 @@
 :root {
-  .root[theme="light"] {
-    --bg: #ffffff;
-    --text: #000000;
-  }
-  .root[theme="dark"] {
-    --bg: #000000;
-    --text: #ffffff;
-  }
+  --bg: #ffffff;
+  --text: #000000;
+}
+.root[theme="light"] {
+  --bg: #ffffff;
+  --text: #000000;
+}
+.root[theme="dark"] {
+  --bg: #000000;
+  --text: #ffffff;
+}
+.root[accent="emerald"] { --accent: #00ffcc; }
+.root[accent="red"]     { --accent: #ff3366; }
+.root[accent="blue"]    { --accent: #33aaff; }
+.root[accent="purple"]  { --accent: #aa66ff; }
+.root[accent="yellow"]  { --accent: #ffcc33; }
+.root[accent="green"]   { --accent: #00cc66; }
+.root[accent="orange"]  { --accent: #ff8800; }
+.root {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
 }
