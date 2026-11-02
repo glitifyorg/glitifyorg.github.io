@@ -86,4 +86,4 @@ document.addEventListener('DOMContentLoaded', function() {
       throw new Error('Домен, который создал фрейм glitify не опознан.');
     }
   }
-}
+});
