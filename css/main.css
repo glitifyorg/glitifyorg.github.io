@@ -1,0 +1,10 @@
+:root {
+  .root[theme="light"] {
+    --bg: #ffffff;
+    --text: #000000;
+  }
+  .root[theme="dark"] {
+    --bg: #000000;
+    --text: #ffffff;
+  }
+}
