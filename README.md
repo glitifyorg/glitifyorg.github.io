@@ -1,10 +1,10 @@
 <div align="center">
   <img src="/assets/mstile.png" alt="Логотип Glitify" width="120" />
-  <h1>Glitify</h1>
+    <h1>Glitify</h1>
   <p><strong>Модификация Scratch нового поколения</strong></p>
   
   <a href="https://glitifyorg.github.io">
-    <img src="https://img.shields.io/badge/Сайт-glitifyorg.github.io-00ffcc?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Сайт" />
+    <img src="https://img.shields.io/badge/Сайт-glitifyorg.github.io-#00ffcc?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Сайт" />
   </a>
   <img src="https://img.shields.io/badge/Версия-0.0.0-purple?style=for-the-badge" alt="Версия" />
   <img src="https://img.shields.io/badge/Лицензия-GPL 3.0-blue?style=for-the-badge" alt="Лицензия" />
