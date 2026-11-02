@@ -1,0 +1,6 @@
+frontend:
+  - 'css/**'
+  - 'js/**'
+  - '*.html'
+documentation:
+  - '*.md'
