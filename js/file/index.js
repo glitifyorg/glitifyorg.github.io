@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const root = document.getElementById('root');  
   function themer(t) {
     console.log(`Тема изменена на ${t}`);
-    root.setAttribute('theme'. t);
+    root.setAttribute('theme', t);
     localStorage.setItem('gf:theme', t);
   }
   function accenter(a) {
     console.log(`Акцент изменён на ${a}`);
-    root.setAttribute('accent'. a);
+    root.setAttribute('accent', a);
     localStorage.setItem('gf:accent', a);
   }
   let lstheme = localStorage.getItem('gf:theme');
