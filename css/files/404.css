@@ -5,10 +5,34 @@
   justify-content: center;
   text-align: center;
   min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 40%, black));
+  border-radius: 20px;
+  margin: 20px;
+}
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent) 60%, transparent);
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 .title {
-  margin-bottom: 10px;
+  margin: 0 0 15px 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 .text {
   max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
