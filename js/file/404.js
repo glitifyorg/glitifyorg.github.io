@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   root.innerHTML = `
     <div class="container">
+      <img alt="Логотип Glitify" src="https://glitifyorg.github.io/assets/mstile.png" class="logo" />
       <h1 class="title">404</h1>
       <p class="text">Не найдено</p>
     </div>
