@@ -36,6 +36,5 @@ function prov() {
   document.getElementById('devmode-caccent').addEventListener('click', () => {
       const selectedValue = document.getElementById('devmode-caccent').value;
       accenter(selectedValue);
-    }
   });
 }
